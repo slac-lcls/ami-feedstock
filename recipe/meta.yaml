@@ -1,5 +1,5 @@
 {% set name = "ami" %}
-{% set version = "2.4.11" %}
+{% set version = "2.4.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/slac-lcls/ami/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 9ba99e98bb5d2c3642e3a3eee05c3c2f78dc0cfec5786732652ef523fa2148ac 
+  sha256: 801232f2778f37e050af93f806cb57bb2e1ca0c2a08e576b4c021a12c072bce8 
 
 build:
   skip: True  # [win]
@@ -37,7 +37,7 @@ requirements:
     - mypy
     - numba
     - h5py
-    - pyarrow
+      #    - pyarrow
     - scipy
     - pytest-qt
     - pytest-asyncio
@@ -48,6 +48,7 @@ requirements:
     - pyqode.python
     - qtconsole
     - prometheus_client
+    - p4p
 
 about:
   home: https://github.com/slac-lcls/ami
